@@ -1,6 +1,5 @@
 
 sentence_transformers
-
 aiofiles
 aiohttp
 datasets

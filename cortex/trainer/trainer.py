@@ -602,9 +602,11 @@ class CortexTrainer:
         config = Munch(config)
 
         # Add bittensor in there.
-        config.bittensor =  bittensor.config(parser = self.argparser())
+        config.bittensor =  
         
         return config
+
+
 
     @classmethod
     def import_module(cls, import_path:str) -> 'Object':
@@ -629,8 +631,10 @@ class CortexTrainer:
             module_init_fn = getattr(module_class,fn)
             module_object =  module_init_fn(*module_args, **module_kwargs)
         return module_object
-
-
+    
+    @property
+    def get_bittensor_config(self):
+        return bittensor.config(parser = self.argparser())
     def argparser(self) -> 'argparse.ArgumentParser':
         parser = argparse.ArgumentParser( 
             description=f"Bittensor Speed Test ",
