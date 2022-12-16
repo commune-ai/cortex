@@ -4,6 +4,8 @@ import commune
 from . import utils
 from .receptor import ReceptorPool as receptor_pool
 from .trainer import trainer
+from .proto import cortex_pb2 as proto
+from .proto import cortex_pb2_grpc as grpc
 from . import model
 
 Module = commune.Module

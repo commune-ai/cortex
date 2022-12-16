@@ -5,4 +5,6 @@ datasets
 streamlit
 aiofiles
 aiohttp
-ray
+ray[default]
+grpcio 
+grpcio-tools

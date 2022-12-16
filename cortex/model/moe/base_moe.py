@@ -7,7 +7,7 @@ import numpy as np
 import math
 import bittensor
 from cortex.metric import  phrase_cross_entropy
-
+from typing import *
 class BaseMOE(torch.nn.Module):
     def __init__(self, 
                 input_dim:int=10, 
@@ -99,7 +99,7 @@ class BaseMOE(torch.nn.Module):
         self.optimizer = optimizer if optimizer else self.optimizer
         return self.optimizer
 
-    def trigger_step(self, loss: torch.Tensor)         
+    def trigger_step(self, loss: torch.Tensor) :       
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()

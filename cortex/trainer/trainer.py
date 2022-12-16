@@ -602,7 +602,7 @@ class CortexTrainer:
         config = Munch(config)
 
         # Add bittensor in there.
-        config.bittensor =  
+        config.bittensor =  bittensor.config()
         
         return config
 
